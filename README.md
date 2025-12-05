@@ -8,11 +8,13 @@
 ### Backend
 - **Node.js 20**
 
-## Quick Start
 
+
+## Getting Started Start
 ### Prerequisites
 - **Git**
-- **Docker Desktop** (have it open)
+- **Docker Desktop**
+- **NodeJS**
 
 ### Setup
 ```bash
@@ -24,6 +26,10 @@ cp backend/env.example backend/.env (will change this)
 
 # 3. Start
 docker compose up --build
+
+# Install all npm packages ig
+npm install
+npm run postinstall
 ```
 
 ### Access Points
@@ -56,9 +62,15 @@ docker compose restart       # Restart containers
 ## Project Structure
 
 ```
-bp-ibc/
+bp-furever/
 ├── frontend/            # React frontend
 │   ├── src/
+│   │   ├── components/
+│   │   │   └── <component name>/
+│   │   ├── pages/
+│   │   │   └── <page name>/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── style.css
 │   ├── public/
 │   ├── Dockerfile
 │   └── package.json
